@@ -11,7 +11,7 @@ and therefore is compatible with earlier L4T versions.
 
 ## Status
 
-Currently it only tests omx plugin with `nvoverlay`. 
+Currently it only tests omx plugin with `nvoverlay` and `nvconvert` 
 We are planning on adding several tests including encoding. 
 
 ## Getting started
@@ -25,6 +25,11 @@ And then run `make build` to build the container.
 
 To run the gstreamer in container test using omx run: `docker-compose run gst`
 
+
+## Known issues
+
+- Sometimes the encoder fails to allocate memory from within docker.
+Current workaround is to initialize the encoder from outside the container first.
 
 ## Further links
 
