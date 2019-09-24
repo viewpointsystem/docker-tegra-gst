@@ -73,13 +73,13 @@ COPY --from=build /tmp/out/gst-omx_0.28.2.1-tegra-1_arm64.deb /tmp/gst-omx_0.28.
 RUN dpkg -i /tmp/*.deb
 RUN rm /tmp/*.deb
 
-RUN pip3 install mixtape
+RUN pip3 install mixtape dbus-next
 
 COPY ./src /
 WORKDIR /src
 
 RUN dpkg -l | grep gstreamer
-
+RUN apt-get install strace
 # Fix permissions
 # RUN groupadd -g 1001 nvidia && \
 #    useradd -r -u 1001 -g nvidia nvidia
