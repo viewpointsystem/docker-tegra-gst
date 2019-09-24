@@ -11,7 +11,7 @@ and therefore is compatible with earlier L4T versions.
 
 ## Status
 
-Currently it only tests omx plugin with `nvoverlay` and `nvconvert` 
+Currently it only tests omx plugin with `nvoverlaysink` and `nvvidconv` 
 We are planning on adding several tests including encoding. 
 
 ## Getting started
